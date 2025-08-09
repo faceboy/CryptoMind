@@ -1,0 +1,4 @@
+Your Task:
+
+Thoroughly review the entire codebase and provide a comprehensive solution that resolves the issue below. 
+Include the full code for all modified files, ensuring the solution is accurate and not merely a temporary/hack fix. Ensure your solution is 100% configurable with no hard coding.

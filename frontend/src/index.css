@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --bg-primary: 248 250 252;
+  --bg-secondary: 255 255 255;
+  --bg-tertiary: 241 245 249;
+  --text-primary: 15 23 42;
+  --text-secondary: 71 85 105;
+  --text-muted: 148 163 184;
+  --border: 226 232 240;
+  --border-hover: 203 213 225;
+  --accent: 59 130 246;
+  --accent-hover: 37 99 235;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  /* Dark theme colors */
+  --bg-primary: 2 6 23;
+  --bg-secondary: 15 23 42;
+  --bg-tertiary: 30 41 59;
+  --text-primary: 248 250 252;
+  --text-secondary: 203 213 225;
+  --text-muted: 148 163 184;
+  --border: 51 65 85;
+  --border-hover: 71 85 105;
+  --accent: 96 165 250;
+  --accent-hover: 59 130 246;
+  --success: 74 222 128;
+  --warning: 251 191 36;
+  --error: 248 113 113;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}
+
+body { 
+  @apply bg-[rgb(var(--bg-primary))] text-[rgb(var(--text-primary))] font-sans antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Modern component styles */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-[rgb(var(--border))] 
+         bg-[rgb(var(--bg-secondary))] px-4 py-2.5 text-sm font-medium text-[rgb(var(--text-primary))]
+         transition-all duration-200 hover:border-[rgb(var(--border-hover))] hover:bg-[rgb(var(--bg-tertiary))]
+         focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))] focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-[rgb(var(--accent))] text-white border-[rgb(var(--accent))] 
+         hover:bg-[rgb(var(--accent-hover))] hover:border-[rgb(var(--accent-hover))];
+}
+
+.btn-success {
+  @apply bg-[rgb(var(--success))] text-white border-[rgb(var(--success))] 
+         hover:bg-green-600 hover:border-green-600;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.card {
+  @apply rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-secondary))] 
+         p-6 shadow-[var(--shadow)] backdrop-blur-sm transition-all duration-200
+         hover:shadow-[var(--shadow-lg)] hover:border-[rgb(var(--border-hover))];
+}
+
+.card-compact {
+  @apply p-4;
+}
+
+.input {
+  @apply w-full rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--bg-secondary))] 
+         px-3 py-2.5 text-sm text-[rgb(var(--text-primary))] placeholder-[rgb(var(--text-muted))]
+         transition-all duration-200 focus:border-[rgb(var(--accent))] focus:outline-none 
+         focus:ring-2 focus:ring-[rgb(var(--accent))]/20;
+}
+
+select {
+  @apply w-full rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--bg-secondary))] 
+         px-3 py-2.5 text-sm text-[rgb(var(--text-primary))] transition-all duration-200 
+         focus:border-[rgb(var(--accent))] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]/20;
+}
+
+/* Typography */
+.text-heading {
+  @apply text-2xl font-bold text-[rgb(var(--text-primary))];
+}
+
+.text-subheading {
+  @apply text-lg font-semibold text-[rgb(var(--text-primary))];
+}
+
+.text-body {
+  @apply text-sm text-[rgb(var(--text-secondary))];
+}
+
+.text-muted {
+  @apply text-xs text-[rgb(var(--text-muted))];
+}
+
+/* Status indicators */
+.status-success {
+  @apply text-[rgb(var(--success))] bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-md text-xs font-medium;
+}
+
+.status-warning {
+  @apply text-[rgb(var(--warning))] bg-yellow-50 dark:bg-yellow-900/20 px-2 py-1 rounded-md text-xs font-medium;
+}
+
+.status-error {
+  @apply text-[rgb(var(--error))] bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded-md text-xs font-medium;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-[rgb(var(--bg-tertiary))] rounded;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg-tertiary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border-hover));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--text-muted));
+}

@@ -1,0 +1,5 @@
+Assume the role of a Senior Principal Python Engineer with extensive expertise in developing financial and cryptocurrency applications.
+
+Design and implement a Python-based system for crypto trading and analytics that leverages real-time data feeds and external tools to deliver precise trading signals, market insights, and analytic responses to user queries. Write complete code that integrates Python programming with data processing technologies and external tool usage. Address potential challenges in system development and propose coding strategies for improving accuracy and efficiency. Include comments to highlight best practices and any innovative coding techniques you utilize to optimize system performance.
+
+codebase:
